@@ -23,7 +23,8 @@ $result = json_decode($result, true);
 
 if ($result['success']) {
     echo 'reCAPTCHA verification passed.';
-    // Further processing if reCAPTCHA verification is successful.
+    echo '<script>alert("reCAPTCHA verification passed.");</script>';
+    echo '<script>window.location.href = window.location.href;</script>';
 } else {
     echo 'reCAPTCHA verification failed.';
     // Further processing if reCAPTCHA verification fails.
