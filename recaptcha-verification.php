@@ -1,3 +1,5 @@
+<?php
+
 $recaptcha_secret = '6LcdJB4pAAAAAGXOos5MiQ9uuW70KXtY9okFQzFm';
 $recaptcha_response = $_POST['g-recaptcha-response'];
 
@@ -20,7 +22,10 @@ $result = file_get_contents($url, false, $context);
 $result = json_decode($result, true);
 
 if ($result['success']) {
-    // reCAPTCHA verification passed
+    echo 'reCAPTCHA verification passed.';
+    // Further processing if reCAPTCHA verification is successful.
 } else {
-    // reCAPTCHA verification failed
+    echo 'reCAPTCHA verification failed.';
+    // Further processing if reCAPTCHA verification fails.
 }
+?>
