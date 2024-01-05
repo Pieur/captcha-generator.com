@@ -15,18 +15,25 @@
           'sitekey' : '6LcdJB4pAAAAAN0rXqeztxRV4awY18MzWWnaKbzh',
           'theme' : 'light'
         });
-        widgetId2 = grecaptcha.render(document.getElementById('example2'), {
-          'sitekey' : '6LcdJB4pAAAAAN0rXqeztxRV4awY18MzWWnaKbzh'
-        });
-        grecaptcha.render('example3', {
-          'sitekey' : '6LcdJB4pAAAAAN0rXqeztxRV4awY18MzWWnaKbzh',
-          'callback' : verifyCallback,
-          'theme' : 'dark'
-        });
       };
     </script>
   </head>
   <body>
+    <label for="myCheckbox">Enable Feature:</label>
+    <input type="checkbox" id="myCheckbox" onchange="handleCheckboxChange()">
+
+    <script>
+        function handleCheckboxChange() {
+            var checkbox = document.getElementById("myCheckbox");
+            if (checkbox.checked) {
+                alert("Checkbox is checked! Feature enabled.");
+                // Your additional logic when the checkbox is checked goes here
+            } else {
+                alert("Checkbox is unchecked. Feature disabled.");
+                // Your additional logic when the checkbox is unchecked goes here
+            }
+        }
+    </script>
     <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
     <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
       <div id="example1"></div>
