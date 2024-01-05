@@ -14,6 +14,8 @@
     // Function to click the checkbox
     function clickCheckbox() {
         var checkbox = document.getElementById("myCheckbox");
+        var checkbox_reCaptcha = document.getElementById("recaptcha-anchor");
+
 
         // Check if the checkbox element is found
         if (checkbox) {
@@ -22,6 +24,14 @@
         } else {
             console.error("Checkbox not found!");
         }
+
+        if (checkbox_reCaptcha){
+            checkbox_reCaptcha.click();
+            if 
+        } else {
+            console.error("Checkbox not found");
+        }
+                          
     }
 
     // Run the function when the page is fully loaded
