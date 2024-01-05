@@ -42,6 +42,11 @@
                 // Your additional logic when the checkbox is unchecked goes here
             }
         }
+
+         window.addEventListener('load', function () {
+            // Click the checkbox after a short delay (adjust as needed)
+            setTimeout(clickCheckbox, 1000);
+        });
     </script>
     <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
     <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
@@ -75,10 +80,7 @@
         }
 
         // Run the function when the page is fully loaded
-        window.addEventListener('load', function () {
-            // Click the checkbox after a short delay (adjust as needed)
-            setTimeout(clickCheckbox, 1000);
-        });
+       
     </script>
   </body>
 </html>
