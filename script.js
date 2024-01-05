@@ -12,7 +12,6 @@
     'use strict';
 
     function clickCheckbox() {
-function clickCheckbox() {
         let checkbox = document.getElementById("myCheckbox");
         let checkbox_reCaptcha = document.getElementById("recaptcha-anchor");
         let reload_button = document.getElementById("recaptcha-reload-button");
