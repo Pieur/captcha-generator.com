@@ -11,23 +11,22 @@
 (function() {
     'use strict';
 
-    // Function to click the checkbox
     function clickCheckbox() {
-        var checkbox = document.getElementById("myCheckbox");
-        var checkbox_reCaptcha = document.getElementById("recaptcha-anchor");
+        let checkbox = document.getElementById("myCheckbox");
+        let checkbox_reCaptcha = document.getElementById("recaptcha-anchor");
+        let reload_button = document.getElementById("recaptcha-reload-button");
 
-
-        // Check if the checkbox element is found
         if (checkbox) {
-            // Simulate a click on the checkbox
             checkbox.click();
         } else {
             console.error("Checkbox not found!");
         }
-
+        
         if (checkbox_reCaptcha){
             checkbox_reCaptcha.click();
-            if 
+            if (checkbox_reCaptcha.checked){
+                reload_button.click;
+            }
         } else {
             console.error("Checkbox not found");
         }
