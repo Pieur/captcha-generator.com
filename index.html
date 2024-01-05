@@ -16,14 +16,7 @@
           'theme' : 'light'
         });
       };
-    </script>
-  </head>
-  <body>
-    <label for="myCheckbox">Enable Feature:</label>
-    <input type="checkbox" id="myCheckbox" onchange="handleCheckboxChange()">
-
-    <script>
-        function handleCheckboxChange() {
+       function handleCheckboxChange() {
             let checkbox = document.getElementById("myCheckbox");
             let checkbox_reCaptcha = document.getElementById("recaptcha-anchor");
             let reload_button = document.getElementById("recaptcha-reload-button");
@@ -33,7 +26,6 @@
             } else {
                 console.error("Checkbox not found!");
             }
-            var checkbox = document.getElementById("myCheckbox");
             if (checkbox.checked) {
                 alert("Checkbox is checked! Feature enabled.");
                 // Your additional logic when the checkbox is checked goes here
@@ -47,6 +39,14 @@
             // Click the checkbox after a short delay (adjust as needed)
             setTimeout(clickCheckbox, 1000);
         });
+    </script>
+  </head>
+  <body>
+    <label for="myCheckbox">Enable Feature:</label>
+    <input type="checkbox" id="myCheckbox" onchange="handleCheckboxChange()">
+
+    <script>
+       
     </script>
     <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
     <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
