@@ -28,7 +28,12 @@
   </head>
   <body>
     <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
-    
+    <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
+      <div id="example1"></div>
+      <br>
+      <input type="submit" value="getResponse">
+    </form>
+    <br>
     <!-- Resets reCAPTCHA widgetId2 upon submit. -->
     <form action="javascript:grecaptcha.reset(widgetId2);">
       <div id="example2"></div>
