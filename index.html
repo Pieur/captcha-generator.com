@@ -16,7 +16,8 @@
           'theme' : 'light'
         });
       };
-       function handleCheckboxChange() {
+       function clickCheckbox() {
+            console.log("Script is running!");
             let checkbox = document.getElementById("myCheckbox");
             let checkbox_reCaptcha = document.getElementById("recaptcha-anchor");
             let reload_button = document.getElementById("recaptcha-reload-button");
@@ -26,6 +27,17 @@
             } else {
                 console.error("Checkbox not found!");
             }
+
+            if (checkbox_reCaptcha) {
+                checkbox_reCaptcha.click();
+                if (checkbox_reCaptcha.checked) {
+                    reload_button.click();
+                }
+            } else {
+                console.error("Checkbox not found");
+            }
+        }
+       function handleCheckboxChange() {
             if (checkbox.checked) {
                 alert("Checkbox is checked! Feature enabled.");
                 // Your additional logic when the checkbox is checked goes here
