@@ -10,7 +10,7 @@
 
 window.addEventListener('load', function() {
         // Click the checkbox after a short delay (adjust as needed)
-        setTimeout(clickCheckbox, 1000);
+        setTimeout(clickCheckbox(), 1000);
     });
 
 function clickCheckbox() {
