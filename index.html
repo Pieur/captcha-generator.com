@@ -8,6 +8,7 @@
       };
       var widgetId1;
       var widgetId2;
+      
       var onloadCallback = function() {
         // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
         // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
@@ -20,7 +21,7 @@
        function clickCheckbox() {
             console.log("Script is running!");
             let checkbox = document.getElementById("myCheckbox");
-            let checkbox_reCaptcha = document.getElementById("recaptcha-anchor");
+            let checkbox_reCaptcha = document.getElementById("gasp-checkbox");
             let reload_button = document.getElementById("recaptcha-reload-button");
 
             if (checkbox) {
