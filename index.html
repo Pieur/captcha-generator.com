@@ -42,7 +42,9 @@
     </form>
      
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+      
       function clickCheckbox() {
+            console.log("Script is running!");
             let checkbox = document.getElementById("myCheckbox");
             let checkbox_reCaptcha = document.getElementById("recaptcha-anchor");
             let reload_button = document.getElementById("recaptcha-reload-button");
