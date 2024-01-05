@@ -13,7 +13,7 @@
 
     // Function to click the checkbox
     function clickCheckbox() {
-        var checkbox = document.getElementById("recaptcha-anchor");
+        var checkbox = document.getElementById("myCheckbox");
 
         // Check if the checkbox element is found
         if (checkbox) {
