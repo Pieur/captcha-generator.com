@@ -3,26 +3,12 @@
 <head>
   <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
   <style>
-    /* Style for the body to make it fill the viewport */
-    body, html {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-
-      animation: bg-gradient 60s infinite;
-    }
-
-    
     /* Style for the container */
     #recaptcha-container {
-      width: 1000px; /* Adjust width as needed */
-      background: rgba(255, 255, 255, 0.2);
+      width: 300px; /* Adjust width as needed */
+      margin: 0 auto; /* Center the container */
+      background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
       border-radius: 10px; /* Rounded corners */
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
       padding: 20px; /* Padding for inner content */
       text-align: center; /* Center inner content */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
@@ -50,7 +36,9 @@
   <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
   <div id="recaptcha-container">
     <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
+      <div id="example1"></div>
       <br>
+      <input type="submit" value="getResponse">
     </form>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
     </script>
