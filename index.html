@@ -37,7 +37,7 @@
         // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
         widgetId1 = grecaptcha.render('example1', {
           'sitekey' : '6LcdJB4pAAAAAN0rXqeztxRV4awY18MzWWnaKbzh',
-          'theme' : 'light'
+          'theme' : 'dark'
         });
       };
 
@@ -47,9 +47,7 @@
   <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
   <div id="recaptcha-container">
     <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
-      <div id="example1"></div>
-      <br>
-      <input type="submit" value="getResponse">
+      
     </form>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
     </script>
