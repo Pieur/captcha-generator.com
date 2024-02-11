@@ -3,10 +3,19 @@
 <head>
   <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
   <style>
+    /* Style for the body to make it fill the viewport */
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0; /* Background color for the page */
+    }
+
     /* Style for the container */
     #recaptcha-container {
       width: 300px; /* Adjust width as needed */
-      margin: 0 auto; /* Center the container */
       background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
       border-radius: 10px; /* Rounded corners */
       padding: 20px; /* Padding for inner content */
