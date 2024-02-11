@@ -14,22 +14,23 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
     }
   </style>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script type="text/javascript">
-    var verifyCallback = function(response) {
-      alert(response);
-    };
-    var widgetId1;
+      var verifyCallback = function(response) {
+        alert(response);
+      };
+      var widgetId1;
+      var widgetId2;
+      
+      var onloadCallback = function() {
+        // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+        // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+        widgetId1 = grecaptcha.render('example1', {
+          'sitekey' : '6LcdJB4pAAAAAN0rXqeztxRV4awY18MzWWnaKbzh',
+          'theme' : 'light'
+        });
+      };
 
-    var onloadCallback = function() {
-      // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
-      // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
-      widgetId1 = grecaptcha.render('example1', {
-        'sitekey' : '6LcdJB4pAAAAAN0rXqeztxRV4awY18MzWWnaKbzh',
-        'theme' : 'light'
-      });
-    };
-  </script>
+    </script>
 </head>
 <body>
   <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
