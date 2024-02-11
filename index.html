@@ -1,39 +1,44 @@
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
-    <script type="text/javascript">
-      var verifyCallback = function(response) {
-        alert(response);
-      };
-      var widgetId1;
-      var widgetId2;
-      
-      var onloadCallback = function() {
-        // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
-        // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
-        widgetId1 = grecaptcha.render('example1', {
-          'sitekey' : '6LcdJB4pAAAAAN0rXqeztxRV4awY18MzWWnaKbzh',
-          'theme' : 'light'
-        });
-      };
+<head>
+  <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
+  <style>
+    /* Style for the container */
+    #recaptcha-container {
+      width: 300px; /* Adjust width as needed */
+      margin: 0 auto; /* Center the container */
+      background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+      border-radius: 10px; /* Rounded corners */
+      padding: 20px; /* Padding for inner content */
+      text-align: center; /* Center inner content */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    }
+  </style>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script type="text/javascript">
+    var verifyCallback = function(response) {
+      alert(response);
+    };
+    var widgetId1;
 
-    </script>
-  </head>
-  <body>
-
-
-
-    <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
+    var onloadCallback = function() {
+      // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+      // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+      widgetId1 = grecaptcha.render('example1', {
+        'sitekey' : '6LcdJB4pAAAAAN0rXqeztxRV4awY18MzWWnaKbzh',
+        'theme' : 'light'
+      });
+    };
+  </script>
+</head>
+<body>
+  <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
+  <div id="recaptcha-container">
     <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
       <div id="example1"></div>
       <br>
       <input type="submit" value="getResponse">
     </form>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-
-      
-
-    </script>
-  </body>
+  </div>
+</body>
 </html>
