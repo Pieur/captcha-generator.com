@@ -18,28 +18,7 @@
         });
       };
        console.log("Script is running!");
-       function clickCheckbox() {
-            console.log("Script is running!");
-            let checkbox = document.getElementById("myCheckbox");
-            let checkbox_reCaptcha = document.getElementById("gasp-checkbox");
-            let reload_button = document.getElementById("recaptcha-reload-button");
-
-            if (checkbox) {
-                checkbox.click();
-            } else {
-                console.error("Checkbox not found!");
-            }
-
-            if (checkbox_reCaptcha) {
-                checkbox_reCaptcha.click();
-                if (checkbox_reCaptcha.checked) {
-                    reload_button.click();
-                }
-            } else {
-                console.error("Checkbox not found");
-                alert("Recaptcha Checkbox is unchecked! Feature not enabled.");
-            }
-        }
+       
        
 
          window.addEventListener('load', function () {
