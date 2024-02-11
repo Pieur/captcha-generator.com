@@ -13,6 +13,17 @@
       background-color: #8EC5FC;
       background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
     }
+    .blurred-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
+      border-radius: 10px; /* Rounded corners */
+      z-index: -1; /* Ensure it's behind the main content */
+      backdrop-filter: blur(10px); /* Blur effect */
+    }
     
     #recaptcha-container {
       width: 300px; /* Adjust width as needed */
